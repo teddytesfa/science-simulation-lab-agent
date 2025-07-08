@@ -1,0 +1,77 @@
+# Projectile Motion Template
+id: projectile_motion
+name: Projectile Motion
+description: Simulates the motion of a projectile launched at an angle.
+
+# Default parameters
+parameters:
+  initial_velocity:
+    value: 20.0
+    min: 1.0
+    max: 100.0
+    step: 0.5
+    unit: m/s
+    description: Initial velocity of the projectile
+    
+  launch_angle:
+    value: 45.0
+    min: 0.0
+    max: 90.0
+    step: 1.0
+    unit: degrees
+    description: Launch angle from horizontal
+    
+  gravity:
+    value: 9.8
+    min: 1.0
+    max: 20.0
+    step: 0.1
+    unit: m/s²
+    description: Acceleration due to gravity
+
+# Objects in the simulation
+objects:
+  - type: circle
+    name: projectile
+    radius: 5
+    color: [255, 0, 0]  # Red
+    initial_position: [50, 100]
+    dynamic: true
+    
+  - type: segment
+    name: ground
+    start: [0, 0]
+    end: [800, 0]
+    color: [0, 128, 0]  # Green
+    static: true
+
+# What the student needs to find
+targets:
+  - id: max_height
+    description: Maximum height reached by the projectile
+    type: numeric
+    unit: m
+    tolerance: 0.1
+    
+  - id: range
+    description: Horizontal distance traveled
+    type: numeric
+    unit: m
+    tolerance: 0.5
+
+# Hints to help the student
+hints:
+  - text: "Remember that horizontal and vertical motions are independent."
+    triggers: ["horizontal", "vertical", "motion"]
+    
+  - text: "The maximum height depends on the vertical component of velocity."
+    triggers: ["height", "vertical", "velocity"]
+    
+  - text: "The range depends on both the horizontal velocity and the time in the air."
+    triggers: ["range", "distance", "horizontal"]
+
+# Feedback messages
+feedback:
+  correct: "Great job! Your calculations are correct."
+  incorrect: "Not quite. Check your calculations and try again."
+  partial: "You're on the right track, but there's a small error in your calculations."

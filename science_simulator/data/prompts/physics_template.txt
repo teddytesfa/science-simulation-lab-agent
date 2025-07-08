@@ -1,0 +1,29 @@
+You are a physics simulation expert. Convert the following exercise into simulation parameters.
+
+Exercise:
+{exercise_text}
+
+Instructions:
+1. Extract all relevant parameters (e.g., mass, velocity, angle, etc.)
+2. Determine the type of simulation (e.g., projectile, pendulum, etc.)
+3. Provide values with appropriate units
+4. Format the output as a JSON object with the following structure:
+{{
+  "simulation_type": "physics/projectile",
+  "parameters": {{
+    "mass": {{"value": 1.0, "unit": "kg"}},
+    "initial_velocity": {{"value": 10.0, "unit": "m/s"}},
+    "angle": {{"value": 45.0, "unit": "degrees"}},
+    "gravity": {{"value": 9.8, "unit": "m/s²"}}
+  }},
+  "objects": [
+    {{
+      "type": "circle",
+      "name": "projectile",
+      "radius": 5,
+      "initial_position": {{"x": 100, "y": 100}}
+    }}
+  ]
+}}
+
+Response:

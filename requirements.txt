@@ -1,0 +1,32 @@
+# Core Dependencies
+PyQt6>=6.4.0           # For the desktop application UI
+numpy>=1.24.0          # Numerical computing
+matplotlib>=3.7.0      # 2D plotting
+pandas>=2.0.0          # Data manipulation
+scipy>=1.10.0          # Scientific computing
+
+# Physics Simulation
+pymunk>=6.4.0          # 2D physics engine
+pyglet>=2.0.0          # For graphics and windowing
+
+# Gemma 3N Integration
+transformers>=4.36.0    # For Gemma model
+torch>=2.0.0           # PyTorch backend
+sentencepiece>=0.1.99   # Tokenizer for Gemma
+accelerate>=0.25.0     # For model optimization
+bitsandbytes>=0.41.0   # For quantization
+
+# Natural Language Processing
+spacy>=3.5.0           # For text processing
+en_core_web_sm>=3.5.0  # English language model for spacy
+
+# Data Storage
+PyYAML>=6.0            # For configuration files
+sqlalchemy>=2.0.0      # Database ORM
+
+# Development Tools
+pytest>=7.3.1          # Testing framework
+black>=23.3.0          # Code formatting
+isort>=5.12.0          # Import sorting
+mypy>=1.0.0            # Static type checking
+pylint>=2.17.0         # Code quality
